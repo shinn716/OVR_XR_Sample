@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: shinn
-  productName: ovr_xr_sample
+  productName: ovr_sample
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -141,7 +141,10 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
   preloadedAssets:
+  - {fileID: 0}
   - {fileID: 11400000, guid: 051760d402f9b4d0784ba2b89d555b71, type: 2}
+  - {fileID: 11400000, guid: 7ca6ca6f676ba4ee3a38039253cb9ef3, type: 2}
+  - {fileID: 7981631087309690355, guid: fb9aeec37269b42f1990dfe46d8456b8, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
