@@ -6,6 +6,8 @@ using Oculus.Interaction;
 using Oculus.Interaction.HandGrab;
 using UnityEngine;
 
+[RequireComponent(typeof(Grabbable))]
+[RequireComponent(typeof(HandGrabInteractable))]
 public class Throwable : MonoBehaviour
 {
     public float velocity = 1000f;
