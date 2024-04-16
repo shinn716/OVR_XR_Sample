@@ -13,7 +13,7 @@ public class Throwable : MonoBehaviour
     public float velocity = 1000f;
 
     bool pickUp = false;
-    GameObject parentHand;
+    // GameObject parentHand;
     List<Vector3> trackingPos = new List<Vector3>();
     Rigidbody rb;
     Grabbable grabbable;
@@ -34,25 +34,22 @@ public class Throwable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pickUp)
+        if (pickUp && handGrab.State == InteractableState.Select)
         {
             rb.useGravity = false;
-            transform.SetPositionAndRotation(parentHand.transform.position, parentHand.transform.rotation);
-
+            // transform.SetPositionAndRotation(parentHand.transform.position, parentHand.transform.rotation);
             if (trackingPos.Count > 15)
-            {
                 trackingPos.RemoveAt(0);
-            }
             trackingPos.Add(transform.position);
         }
 
-        if (pickUp && handGrab.State == InteractableState.Normal)
+        if (pickUp && handGrab.State == InteractableState.Hover)
         {
             print("throw");
             eventThrow?.Invoke();
-            pickUp = false;
             Vector3 direction = trackingPos[trackingPos.Count - 1] - trackingPos[0];
-            rb.AddForce(direction * velocity);
+            rb.AddForce(direction * velocity * direction.magnitude);
+            pickUp = false;
             rb.useGravity = true;
             rb.isKinematic = false;
             GetComponent<Collider>().isTrigger = false;
@@ -66,7 +63,7 @@ public class Throwable : MonoBehaviour
             print("pick");
             eventPickup?.Invoke();
             pickUp = true;
-            parentHand = other.gameObject;
+            // parentHand = other.gameObject;
         }
     }
 }
