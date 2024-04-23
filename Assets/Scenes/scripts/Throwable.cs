@@ -36,23 +36,22 @@ public class Throwable : MonoBehaviour
     {
         if (pickUp && handGrab.State == InteractableState.Select)
         {
-            rb.useGravity = false;
+            // rb.useGravity = false;
             // transform.SetPositionAndRotation(parentHand.transform.position, parentHand.transform.rotation);
-            if (trackingPos.Count > 15)
+            if (trackingPos.Count > 5)
                 trackingPos.RemoveAt(0);
             trackingPos.Add(transform.position);
         }
-
-        if (pickUp && handGrab.State == InteractableState.Hover)
+        if (pickUp && handGrab.State == InteractableState.Normal)
         {
             print("throw");
             eventThrow?.Invoke();
             Vector3 direction = trackingPos[trackingPos.Count - 1] - trackingPos[0];
-            rb.AddForce(direction * velocity * direction.magnitude);
-            pickUp = false;
-            rb.useGravity = true;
-            rb.isKinematic = false;
-            GetComponent<Collider>().isTrigger = false;
+            rb.AddForce(velocity * direction);
+            // pickUp = false;
+            // rb.useGravity = true;
+            // rb.isKinematic = false;
+            // GetComponent<Collider>().isTrigger = false;
         }
     }
 

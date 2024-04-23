@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 5709954437440813805}
   - component: {fileID: 5939393075605937247}
   - component: {fileID: 1575758670168648749}
-  - component: {fileID: 6794119254845651461}
+  - component: {fileID: 1262312108810243591}
+  - component: {fileID: 3516248253439476190}
   m_Layer: 0
   m_Name: blue_plam
   m_TagString: Untagged
@@ -97,7 +98,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8073072031652259042}
-  m_Material: {fileID: 13400000, guid: 579bc5dab807d7f41bddddbcfbc128de, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -105,7 +106,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -119,7 +120,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8073072031652259042}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -133,7 +134,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -175,7 +176,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 8545706005897826952}
   _rigidbody: {fileID: 6410985143871537252}
-  _physicsGrabbable: {fileID: 0}
+  _physicsGrabbable: {fileID: 1262312108810243591}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -187,14 +188,14 @@ MonoBehaviour:
     _middleRequirement: 1
     _ringRequirement: 0
     _pinkyRequirement: 0
-    _unselectMode: 0
+    _unselectMode: 1
   _palmGrabRules:
     _thumbRequirement: 1
     _indexRequirement: 2
     _middleRequirement: 2
     _ringRequirement: 2
     _pinkyRequirement: 1
-    _unselectMode: 0
+    _unselectMode: 1
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
@@ -791,7 +792,22 @@ MonoBehaviour:
     - {x: -0.6959634, y: 0.1768332, z: -0.6959634}
     - {x: -0.34139428, y: 0.6646524, z: -0.66459554}
     - {x: -0.17685792, y: 0.6958694, z: -0.6960511}
---- !u!114 &6794119254845651461
+--- !u!114 &1262312108810243591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073072031652259042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _grabbable: {fileID: 8545706005897826952}
+  _rigidbody: {fileID: 6410985143871537252}
+  _scaleMassWithSize: 1
+--- !u!114 &3516248253439476190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -803,4 +819,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8706438015e73a7499a4e07d5ecf7445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 2000
+  velocity: 5
