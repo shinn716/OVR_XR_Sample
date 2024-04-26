@@ -10,10 +10,9 @@ using UnityEngine;
 [RequireComponent(typeof(HandGrabInteractable))]
 public class Throwable : MonoBehaviour
 {
-    public float velocity = 1000f;
+    [SerializeField] float velocity = 1000f;
 
     bool pickUp = false;
-    // GameObject parentHand;
     List<Vector3> trackingPos = new List<Vector3>();
     Rigidbody rb;
     Grabbable grabbable;
@@ -36,8 +35,6 @@ public class Throwable : MonoBehaviour
     {
         if (pickUp && handGrab.State == InteractableState.Select)
         {
-            // rb.useGravity = false;
-            // transform.SetPositionAndRotation(parentHand.transform.position, parentHand.transform.rotation);
             if (trackingPos.Count > 5)
                 trackingPos.RemoveAt(0);
             trackingPos.Add(transform.position);
@@ -48,10 +45,6 @@ public class Throwable : MonoBehaviour
             eventThrow?.Invoke();
             Vector3 direction = trackingPos[trackingPos.Count - 1] - trackingPos[0];
             rb.AddForce(velocity * direction);
-            // pickUp = false;
-            // rb.useGravity = true;
-            // rb.isKinematic = false;
-            // GetComponent<Collider>().isTrigger = false;
         }
     }
 
@@ -62,7 +55,6 @@ public class Throwable : MonoBehaviour
             print("pick");
             eventPickup?.Invoke();
             pickUp = true;
-            // parentHand = other.gameObject;
         }
     }
 }
