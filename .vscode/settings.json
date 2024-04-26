@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ovr_xr_sample.sln"
+    "dotnet.defaultSolution": "OVR_XR_Sample.sln",
+    "cSpell.words": [
+        "Interactable"
+    ]
 }
