@@ -238,10 +238,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RingBoard
       objectReference: {fileID: 0}
-    - target: {fileID: 106158, guid: 9e6cf7da218ba4a41b1325cd6fdd27d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 430962, guid: 9e6cf7da218ba4a41b1325cd6fdd27d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
