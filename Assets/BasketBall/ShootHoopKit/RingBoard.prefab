@@ -1470,7 +1470,7 @@ HingeJoint:
   m_Anchor: {x: -0.7, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -4.42, y: 5.2200003, z: 0}
+  m_ConnectedAnchor: {x: -0.20000006, y: 5.2200003, z: 31.08}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
