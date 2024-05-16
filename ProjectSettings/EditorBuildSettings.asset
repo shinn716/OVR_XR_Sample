@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/xr_sample.unity
+  - enabled: 0
+    path: Assets/Scenes/0_GrabSample.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/1_BasketballGame.unity
+    guid: 58ada0282ad66417fa9ff44465856382
+  - enabled: 1
+    path: Assets/Scenes/2_SceneAPI_1.unity
+    guid: c19b0da7f6ac67d4a84cefd2cda533e7
   - enabled: 0
     path: Assets/Oculus/Interaction/Samples/Scenes/Examples/BodyPoseDetectionExamples.unity
     guid: 06a339ff5513d7f49a91ab90cbe194d4
